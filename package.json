@@ -1,0 +1,31 @@
+{
+  "name": "rutgers-smallscale-projects",
+  "version": "1.0.0",
+  "description": "burger homework",
+  "main": "server.js",
+  "engines": {
+    "node": "8.11.1",
+    "npm": "5.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kb2232/burger.git"
+  },
+  "author": "kunle babatunde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kb2232/burger/issues"
+  },
+  "homepage": "https://github.com/kb2232/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  }
+}
