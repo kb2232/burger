@@ -9,7 +9,7 @@ USE burgers_db;
 CREATE TABLE burgers(
   id INT AUTO_INCREMENT PRIMARY KEY,
   burger_name VARCHAR(128) UNIQUE NOT NULL,
-  devoured BIT DEFAULT 0,
+  devoured TINYINT(1) DEFAULT 0,
   createdAt TIMESTAMP DEFAULT NOW()
 );
 -- same burger cannot be eaten by twice by same user;
