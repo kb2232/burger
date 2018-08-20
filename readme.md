@@ -69,5 +69,18 @@
   SELECT fullName, burger_name FROM users
   INNER JOIN burgers
   ON burgers.id = users.burger_id
-  WHERE fullName = "kunle babatunde";
+  WHERE fullName = "kunle babatunde" 
+  AND devoured = 1;
+  ```
+  * snippet from the orms.js
+  ```javascript
+    updateBurger(connection=con,newBurgerName,oldBurgerName)
+    {
+      var sqlUB = `UPDATE ${this.table1} SET burger_name = "${newBurgerName}" WHERE burger_name = "${oldBurgerName}";`;
+      connection.query(sqlUB,(err,result)=>{
+        if (err) {
+          throw err;
+        } else console.log('\nNumber of records inserted:' + result.affectedRows);
+      });
+    }
   ```

@@ -25,4 +25,5 @@ SELECT * FROM users;
 SELECT fullName, burger_name FROM users
 INNER JOIN burgers
 ON burgers.id = users.burger_id
-WHERE fullName = "kunle babatunde";
+WHERE fullName = "kunle babatunde" 
+AND devoured = 1;
