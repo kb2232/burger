@@ -6,14 +6,24 @@
        "dotenv": "^6.0.0",
       "express": "^4.16.3",
       "express-handlebars": "^3.0.0",
-      "mysql": "^2.16.0"
+      "mysql": "^2.16.0",
+      "router": "^1.3.3"
     ```
   
   * structure
+    * config/
+      * connection.js
+      * orms.js
+    * controllers/
+      * burgers_controller.js
     * server.js
     * package.js
     * .gitignore
     * db/
+      * schema.sql
+      * seeds.sql
+    * models/
+      * burger.js
   
   * database setup
   ```sql
