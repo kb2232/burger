@@ -1,38 +1,24 @@
-const sql = require("mysql");
-require('dotenv').config();
-/////////CONNECTON///////////////////////////////////////
-const con = sql.createConnection({
-	host: process.env.DB_HOST,
-	user: process.env.DB_USER,
-	password: process.env.DB_PASS,
-	database: "burgers_db",
-});
-con.connect(function(err) 
-{
-	if (err) {
-		throw err;
-		return;
-	}
-	console.log('Connected to MySQL!!!');
+// Set up MySQL connection.
+require("dotenv").config();
+const mysql = require("mysql");
 
-	con.query('select @@hostname', (err, result) => {
-		if (err) throw err;
-		console.log(result);
-  });
-  
-  // con.query('USE burgers_db',(err,result)=>{
-  //   if(err) throw err;
-  //   console.log(result);
-  // });
-
-  con.query('SHOW TABLES',(err,result)=>{
-    if(err) throw err;
-    result = result.map(res=>{
-      return res.Tables_in_burgers_db;
-    })
-    console.log("tables = ",result);
-  });
-  // con.end();
+/**
+ * local connection settings
+ */
+const connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: process.env.PASSWORD,
+    database: "burgers_db"
 });
 
-module.exports = con;
+connection.connect((err)=> {
+    if (err) {
+        console.error("error connecting: " + err.stack);
+        return;
+    }
+    console.log("connected as id " + connection.threadId);
+});
+
+// Export connection for our ORM to use.
+module.exports = connection;

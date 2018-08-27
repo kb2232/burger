@@ -1,17 +1,22 @@
-const orms = require("../config/orms");
-require('dotenv').config();
+var orm = require("../config/orm.js");
 
-class BURGER extends orms
-{
-  constructor()
-  {
-    super(process.env.DB_TABLE1, process.env.DB_TABLE2);
-  }
+var burger = {
+    all: function (callback) {
+        // orm.all => (table, callback)
+        orm.all("burgers", callback);
+    },
+    create: function (cols, vals, callback) {
+        // orm.create => (table, cols, vals, callback)
+        orm.create("burgers", cols, vals, callback);
+    },
+    update: function (obj, condition, callback) {
+        // orm.update => (table, obj, condition, callback)
+        orm.update("burgers", obj, condition, callback);
+    },
+    delete: function (condition, callback) {
+        // orm.delete => (table, condition, callback)
+        orm.delete("burgers", condition, callback);
+    }
 }
-let newUser = new BURGER();
-newUser.selectAll();
-newUser.insertOneBurger('','sauscy cheese burger', 0); 
-newUser.insertUser('','phil jackson', 2);
-newUser.updateBurger('',"pepper burger","0");
 
-module.exports = BURGER;
+module.exports = burger;
