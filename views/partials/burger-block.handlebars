@@ -1,13 +1,13 @@
 <li class="row">
-		<span class="label col-2">{{id}}</span> 
-		<span class="label col-7">{{burger_name}}</span>
+		<span class="label col s2">{{id}}</span> 
+		<span class="label col s7">{{burger_name}}</span>
 
 	{{#if devoured}}
-		<span class="label col-2">
+		<span class="label col s2">
 			<button class="delete" data-id="{{id}}" data-devoured="{{devoured}}">Delete</button>
 		</span>
 	{{else}}
-		<span class="label col-2">
+		<span class="label col s2">
 			<button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">Devour</button>
 		</span>
 	{{/if}}

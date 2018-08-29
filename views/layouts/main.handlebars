@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-		<title>MVC With Burger</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
-		<script src="/assets/js/burgers.js"></script>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+	<meta http-equiv="x-ua-compatible" content="ie=edge; ie=9; ie=8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="TIS">
+	<meta name="author" content="kunle babatunde">
+   <link rel="icon" href="img/burger.jpg" type="image" sizes="16x16"> 
+	<title>BurgerMe</title>
+
+	{{! Materialize and Font Awesome}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+
+  {{!-- googel apis --}}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	{{!-- css --}}
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  {{!-- javascirpt --}}
+  <script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/burgers.js"></script>
+</head>
+
+<body>
+	{{> _navbar}}
+	{{{ body }}}
+	{{> _footer}}
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+  <script>
+    $(document).ready(() => {
+      $('.button-collapse').sideNav();
+      $('select').material_select();
+    });
+  </script>
 </html>

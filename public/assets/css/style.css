@@ -1,24 +1,18 @@
-body {
-    text-align: center;
-    background: #A4BFCA;
-    margin: 2em;
-}
 
 .container {
     padding: 2em 1em;
     margin-top: 3em;
-    background: white;
+    background: black
 }
 .add {
     padding-bottom: 1em;
     margin-bottom: 1em;
-    background: #F4A13E;
 }
 .ready {
-    background: #63AC36;
+    background: orchid;
 }
 .devoured {
-    background: #D3364C;
+    background: lawngreen;
 }
 h1 {
     margin-bottom: 3em 0;
@@ -36,11 +30,23 @@ ul {
     padding: 0;
 }
 
-#burger-1 { 
-    background-image: url("../img/burger.png"); 
-    height: 150px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1 0 auto;
+  }
+  
+  .border {
+    border: 1px solid black;
+    border-style: dashed;
+  }
+  
+  .center {
+    align-items: center;
+  }
+  

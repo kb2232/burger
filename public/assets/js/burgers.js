@@ -1,4 +1,3 @@
-
 $(function () {  // everything has to be in the anonymous function. WHY?
 
     $("#submit").on("click", function(event) {
